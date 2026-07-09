@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>밥밥 | 맛집 추천</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="밥밥 홈">
+        <span class="brand-mark">밥</span>
+        <span>밥밥</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav-link" href="./index.html">메뉴 입력</a>
+        <a class="nav-link" href="./answer.html">AI 답변</a>
+        <a class="nav-link active" href="./restaurants.html">맛집 추천</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-panel restaurant-layout">
+        <div>
+          <p class="eyebrow">Kakao Local Search</p>
+          <h1 id="restaurantTitle">추천 메뉴 근처 맛집을 찾아볼게요.</h1>
+          <p id="locationCopy">
+            위치 권한을 허용하면 현재 위치를, 거부하면 개포동역을 기준으로 검색합니다.
+          </p>
+        </div>
+        <div class="restaurant-action">
+          <button class="primary-button" id="searchRestaurantsButton" type="button">
+            맛집 검색
+          </button>
+          <p class="status-message" id="restaurantStatus" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+
+      <section class="plain-section">
+        <div class="section-heading">
+          <h2>검색 결과</h2>
+          <span id="searchMeta" class="muted-text">아직 검색하지 않았습니다.</span>
+        </div>
+        <div class="restaurant-list" id="restaurantList"></div>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>밥밥 | AI 답변</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="밥밥 홈">
+        <span class="brand-mark">밥</span>
+        <span>밥밥</span>
+      </a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav-link" href="./index.html">메뉴 입력</a>
+        <a class="nav-link active" href="./answer.html">AI 답변</a>
+        <a class="nav-link" href="./restaurants.html">맛집 추천</a>
+      </nav>
+    </header>
+
+    <main class="page-shell">
+      <section class="hero-panel answer-layout">
+        <div>
+          <p class="eyebrow">AI 추천 결과</p>
+          <h1 id="menuTitle">추천 결과를 기다리고 있어요.</h1>
+          <p id="menuReason">
+            메뉴 입력 페이지에서 상황을 적고 추천을 받으면 이곳에 결과가 표시됩니다.
+          </p>
+        </div>
+
+        <aside class="result-card" aria-label="추천 상세">
+          <div class="result-kicker">추천 메뉴</div>
+          <strong id="menuName">아직 없음</strong>
+          <p id="searchKeyword">검색어: -</p>
+          <div class="tag-list" id="tagList"></div>
+          <div class="button-group">
+            <a class="secondary-button" href="./index.html">다시 추천받기</a>
+            <a class="primary-button" href="./restaurants.html">근처 맛집 찾기</a>
+          </div>
+        </aside>
+      </section>
+
+      <section class="plain-section">
+        <h2>입력한 내용</h2>
+        <p id="originalPrompt" class="muted-text">저장된 입력이 없습니다.</p>
+      </section>
+    </main>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
