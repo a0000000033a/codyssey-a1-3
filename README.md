@@ -55,6 +55,7 @@ API 키는 코드, README, 스크린샷, 커밋 기록에 노출하지 않습니
 AI 추천과 맛집 검색까지 로컬에서 확인하려면 프로젝트에 포함된 Vercel CLI를 사용합니다. `.env.local`은 Git에서 제외되어 있습니다.
 
 ```bash
+pnpm install
 cp .env.example .env.local
 # .env.local에 실제 API 키를 입력
 ./scripts/dev-local.sh --local
@@ -62,7 +63,7 @@ cp .env.example .env.local
 
 실행 후 브라우저에서 `http://localhost:3000`을 엽니다. 포트를 바꾸려면 `./scripts/dev-local.sh --local --listen 127.0.0.1:8080`처럼 실행합니다.
 
-다른 컴퓨터에서 처음 실행할 때는 Node.js를 설치한 뒤 `npm install` 또는 `pnpm install`로 개발 의존성을 설치합니다. `.env.local`은 절대 커밋하지 않습니다.
+`npm install -g vercel`과 `vercel dev`도 일부 환경에서는 동작할 수 있지만, 이 프로젝트는 로컬 환경 변수 로딩과 캐시 경로를 위해 제공된 실행 스크립트를 쓰는 쪽이 더 안정적입니다. `.env.local`은 절대 커밋하지 않습니다.
 
 ## 배포
 
