@@ -77,5 +77,5 @@ cp .env.example .env.local
 배포 후 아래에 Vercel URL을 입력합니다.
 
 ```text
-https://your-project.vercel.app
+https://codyssey-a1-3-hazel.vercel.app/
 ```
