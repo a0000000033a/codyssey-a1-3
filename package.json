@@ -1,0 +1,8 @@
+{
+	"scripts": {
+		"dev": "node -e \"console.log('Use ./scripts/dev-local.sh --local for local Vercel development.')\""
+	},
+	"devDependencies": {
+		"vercel": "^55.0.0"
+	}
+}

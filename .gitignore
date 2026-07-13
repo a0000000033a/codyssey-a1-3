@@ -1,7 +1,13 @@
 .DS_Store
+
+# Local environment files (never commit secrets)
 .env
-.env.local
+.env.*
+!.env.example
+
 .vercel
+.vercel-home/
+node_modules/
 .pycache/
 __pycache__/
 *.pyc

@@ -48,18 +48,21 @@ OPENAI_MODEL=gpt-4o-mini
 KAKAO_REST_API_KEY=Kakao Developers REST API 키
 ```
 
-API 키는 코드, README, 스크린샷, 커밋 기록에 노출하지 않습니다.
+API 키는 코드, README, 스크린샷, 커밋 기록에 노출하지 않습니다. 로컬 실행 시에는 `.env.local`에만 저장하고 Git에 커밋하지 않습니다.
 
 ## 로컬 실행
 
-정적 화면만 확인할 때는 `index.html`을 브라우저로 열 수 있습니다. API까지 로컬에서 확인하려면 Vercel CLI를 사용합니다.
+AI 추천과 맛집 검색까지 로컬에서 확인하려면 프로젝트에 포함된 Vercel CLI를 사용합니다. `.env.local`은 Git에서 제외되어 있습니다.
 
 ```bash
-npm install -g vercel
-vercel dev
+cp .env.example .env.local
+# .env.local에 실제 API 키를 입력
+./scripts/dev-local.sh --local
 ```
 
-로컬 환경 변수는 Vercel CLI 안내에 따라 설정하거나 `.env.local`을 사용합니다. `.env.local`은 커밋하지 않습니다.
+실행 후 브라우저에서 `http://localhost:3000`을 엽니다. 포트를 바꾸려면 `./scripts/dev-local.sh --local --listen 127.0.0.1:8080`처럼 실행합니다.
+
+다른 컴퓨터에서 처음 실행할 때는 Node.js를 설치한 뒤 `npm install` 또는 `pnpm install`로 개발 의존성을 설치합니다. `.env.local`은 절대 커밋하지 않습니다.
 
 ## 배포
 
